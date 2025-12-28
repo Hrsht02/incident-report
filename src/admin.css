@@ -1,0 +1,89 @@
+.admin-container {
+  display: flex;
+  height: calc(100vh - 40px);
+  gap: 20px;
+}
+
+/* LEFT PANEL */
+.admin-sidebar {
+  width: 280px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.admin-sidebar h3 {
+  margin-bottom: 12px;
+}
+
+/* INCIDENT CARD */
+.incident-card {
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 1px solid #e5e7eb;
+  transition: 0.2s;
+}
+
+.incident-card:hover {
+  background: #f1f5f9;
+}
+
+.incident-card.active {
+  border-left: 5px solid #ef4444;
+  background: #fff1f2;
+}
+
+/* RIGHT PANEL */
+.admin-details {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  overflow-y: auto;
+}
+
+/* SECTION */
+.section {
+  margin-top: 24px;
+}
+
+.section h4 {
+  margin-bottom: 12px;
+}
+
+/* STATUS BOX */
+.status-box {
+  border: 1px solid #e5e7eb;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+.status-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.status-select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* BADGES */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.fire { background: #fee2e2; color: #b91c1c; }
+.badge.medical { background: #dcfce7; color: #166534; }
+.badge.accident { background: #e0e7ff; color: #3730a3; }

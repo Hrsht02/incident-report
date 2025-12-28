@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import IncidentReportForm from "./IncidentReportForm";
-import "./index.css";
+import AdminDashboard from "./AdminDashboard";
 
 export default function App() {
+  const [view, setView] = useState("user");
+  const [allIncidents, setAllIncidents] = useState([]);
+
+  if (view === "user") {
+    return (
+      <IncidentReportForm
+        setAllIncidents={setAllIncidents}
+        switchToAdmin={() => setView("admin")}
+      />
+    );
+  }
+
   return (
-    <div className="app">
-      <h1>Incident Reporting</h1>
-      <IncidentReportForm />
-    </div>
+    <AdminDashboard
+      incidents={allIncidents}
+      switchToUser={() => setView("user")}
+    />
   );
 }
